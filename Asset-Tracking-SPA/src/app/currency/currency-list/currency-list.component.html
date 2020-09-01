@@ -1,0 +1,12 @@
+<table>
+  <th>Name</th>
+  <th>Country</th>
+  <th>Rate</th>
+  <th>Date</th>
+  <tr *ngFor="let currency of currencies;">
+    <td>{{currency.name}}</td>
+    <td>{{currency.country}}</td>
+    <td>{{currency.rate}}</td>
+    <td>{{currency.date}}</td>
+  </tr>
+</table>

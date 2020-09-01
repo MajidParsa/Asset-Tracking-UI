@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { CurrencyService } from '../shared/currency.service';
 import { Currency } from '../shared/currency.model';
 
@@ -8,15 +9,16 @@ import { Currency } from '../shared/currency.model';
   styleUrls: ['./currency-list.component.css']
 })
 export class CurrencyListComponent implements OnInit {
-  
+
   currencies : Currency[]
 
-  constructor(private currencyService: CurrencyService) { 
+  constructor(private currencyService: CurrencyService) {
 
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
     this.currencies = this.currencyService.getCurrencies()
+    console.log(this.currencies);
   }
 
 }
