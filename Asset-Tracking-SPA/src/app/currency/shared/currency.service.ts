@@ -28,4 +28,8 @@ export class CurrencyService {
         // ]
     }
 
+    addCurrency(currency: Currency) : Observable<Currency> {
+       //console.log(`${environment.currencyApiUrl}/api/Currency/Add`);
+       return this.http.post<Currency>(`${environment.currencyApiUrl}/api/Currency/Add`, currency)
+    }
 }

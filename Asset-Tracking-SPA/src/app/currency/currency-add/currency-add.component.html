@@ -1,0 +1,15 @@
+<label for="name">Name: </label>
+<input type="text" id="name" [(ngModel)]="currency.name">
+
+<label for="Country">Country: </label>
+<input type="text" id="country" [(ngModel)]="currency.country">
+
+<label for="rate">Rate: </label>
+<input type="number" id="rate" [(ngModel)]="currency.rate">
+
+<label for="date">Date: </label>
+<input type="text" id="date" [(ngModel)]="currency.date">
+
+<div>
+  <button type="button" (click)="onAdd()">Save</button>
+</div>
