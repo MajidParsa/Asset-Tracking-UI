@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { core } from '@angular/compiler';
+import { PageNotFoundComponent } from './core';
 
 export const ROUTES: Routes = [
     {
@@ -6,5 +8,8 @@ export const ROUTES: Routes = [
     },
     {
       path: 'currency', loadChildren: () => import('./currency').then(m => m.CurrencyModule)
+    },
+    {
+      path: '**', component: PageNotFoundComponent
     }
   ];
