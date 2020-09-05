@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { dashboardRoutes } from './dashboard-routes';
+import { DASHBOARD_ROUTES } from './dashboard-routes';
 
 @NgModule({
-    imports: [RouterModule.forChild(dashboardRoutes)],
+    imports: [RouterModule.forChild(DASHBOARD_ROUTES)],
     exports: [RouterModule]
 })
 
