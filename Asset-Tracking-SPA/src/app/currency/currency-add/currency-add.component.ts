@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Currency } from '../shared/currency.model';
 import { CurrencyService } from '../shared/currency.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-currency-add',
@@ -11,7 +12,7 @@ import { CurrencyService } from '../shared/currency.service';
 export class CurrencyAddComponent implements OnInit {
   currency: Currency
 
-  constructor(private currencyService: CurrencyService) {
+  constructor(private currencyService: CurrencyService, private router: Router) {
 
   }
 
@@ -20,13 +21,11 @@ export class CurrencyAddComponent implements OnInit {
   }
 
   onAdd(): void {
-  //  console.log(this.currency)
     this.currencyService.addCurrency(this.currency).subscribe(data => this.functionTest(data))
-
+    this.router.navigate(["/currency"])
   }
 
   functionTest(currency: Currency){
     this.currency = currency
-//    console.log(currency)
   }
 }
