@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CurrencyListComponent } from './currency-list/currency-list.component';
 import { CurrencyAddComponent } from './currency-add/currency-add.component';
+import { CurrencyEditComponent } from './currency-edit/currency-edit.component';
 
 export const CURRENCY_ROUTES : Routes = [
   {
@@ -8,5 +9,8 @@ export const CURRENCY_ROUTES : Routes = [
   },
   {
     path: 'add', component: CurrencyAddComponent
+  },
+  {
+    path: 'edit', component: CurrencyEditComponent
   }
 ]

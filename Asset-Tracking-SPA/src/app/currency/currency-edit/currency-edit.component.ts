@@ -13,9 +13,11 @@ export class CurrencyEditComponent implements OnInit {
   constructor(private currencyService: CurrencyService ) { }
 
   ngOnInit(): void {
+    this.currency = new Currency(null, null, null, null)
   }
 
   onSave(){
+    console.log(this.currency)
     this.currencyService.updateCurrency(this.currency).subscribe(currency => this.currency = currency)
   }
 

@@ -1,14 +1,14 @@
 <label for="name">Name:</label>
-<input id="name" type="text" value="{{currency.name}}">
+<input id="name" type="text" value="{{currency.name}}" [(ngModel)]="currency.name">
 
 <label for="country">Country: </label>
-<input id="country" type="text" value="{{currency.country}}">
+<input id="country" type="text" value="{{currency.country}}" [(ngModel)]="currency.country">
 
 <label for="rate">Rate: </label>
-<input id="rate" type="text" value="{{currency.rate}}">
+<input id="rate" type="number" value="{{currency.rate}}" [(ngModel)]="currency.rate">
 
 <label for="date">Date: </label>
-<input id="date" type="text" value="{{currency.date}}">
+<input id="date" type="text" value="{{currency.date}}" [(ngModel)]="currency.date">
 
-<button id="save" type="button" onclick="onSave()">Save</button>
+<button id="save" type="button" (click)="onSave()">Save</button>
 <a routerLink="/currency">Cancle</a>
