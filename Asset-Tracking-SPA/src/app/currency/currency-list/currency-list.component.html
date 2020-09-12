@@ -1,9 +1,15 @@
 <table>
+  <th>Row</th>
   <th>Name</th>
   <th>Country</th>
   <th>Rate</th>
   <th>Date</th>
-  <tr *ngFor="let currency of currencies;">
+  <tr *ngFor="let currency of currencies; let i = index">
+    <td>{{i + 1}}</td>
+    <td>
+      <a routerLink="edit/{{currency.id}}">Edit</a>
+    </td>
+    <td>{{currency.id}}</td>
     <td>{{currency.name}}</td>
     <td>{{currency.country}}</td>
     <td>{{currency.rate}}</td>

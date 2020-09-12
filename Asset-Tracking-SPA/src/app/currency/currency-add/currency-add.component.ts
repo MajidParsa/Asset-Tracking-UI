@@ -17,7 +17,7 @@ export class CurrencyAddComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.currency = new Currency(null, null, null, null)
+    this.currency = new Currency(null, null, null, null, null)
   }
 
   onAdd(): void {

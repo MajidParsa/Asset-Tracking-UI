@@ -11,6 +11,6 @@ export const CURRENCY_ROUTES : Routes = [
     path: 'add', component: CurrencyAddComponent
   },
   {
-    path: 'edit', component: CurrencyEditComponent
+    path: 'edit/:id', component: CurrencyEditComponent
   }
 ]
