@@ -1,5 +1,7 @@
 <label for="name">Name: </label>
-<input type="text" id="name" [(ngModel)]="currency.name">
+<input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="currency.name" required>
+<div [hidden]="name.valid || name.untouched" >Name is requiered!!!</div>
+<!-- <div *ngIf="name.invalid && name.touched">Name is requiered!!!</div> -->
 
 <label for="Country">Country: </label>
 <input type="text" id="country" [(ngModel)]="currency.country">
