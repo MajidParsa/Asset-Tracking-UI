@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { core } from '@angular/compiler';
 import { PageNotFoundComponent } from './core';
 
-export const ROUTES: Routes = [
+export const APP_ROUTES: Routes = [
     {
       path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
     },
