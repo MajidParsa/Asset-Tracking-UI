@@ -38,6 +38,10 @@ export class CurrencyService {
     }
 
     updateCurrency(currency: Currency) : Observable<Currency>{
-      return this.http.post<Currency>(`${environment.currencyApiUrl}/api/Currency/Update`, currency)
+      return this.http.put<Currency>(`${environment.currencyApiUrl}/api/Currency/Update`, currency)
+    }
+
+    deleteCurrency(id: number){
+      return this.http.delete(`${environment.currencyApiUrl}/api/Currency/Delete?id=${id}`)
     }
 }

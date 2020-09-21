@@ -23,4 +23,9 @@ export class CurrencyListComponent implements OnInit {
     this.currencyService.getCurrencies().subscribe(data => this.currencies = data)
   }
 
+  onDelete(id: number){
+    this.currencyService.deleteCurrency(id).subscribe();
+  }
+
+
 }

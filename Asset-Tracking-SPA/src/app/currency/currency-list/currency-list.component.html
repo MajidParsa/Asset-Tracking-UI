@@ -9,6 +9,9 @@
     <td>
       <a routerLink="edit/{{currency.id}}">Edit</a>
     </td>
+    <td>
+      <a href="#" (click)="onDelete(currency.id)" onclick="return false;">Delete</a>
+    </td>
     <td>{{currency.id}}</td>
     <td>{{currency.name}}</td>
     <td>{{currency.country}}</td>
